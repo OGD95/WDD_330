@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To View Or Not To View?</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <h1>To View or Not to View?</h1>
+        <p class="subheader">Find the Answer Here!</p>
+    </div>
+
+
+
+    <div class="row">
+        <div class="side">
+            <h2>Enter Any Number of the Following Criteria to Find the Associated Critic Reviews:</h2><br>
+
+            <button onclick="getCriticPicks()">Top Ctiric Picks!</button>
+
+            <button onclick="getCriticNames()">Critic Names</button>
+
+            <div>
+                <div id="errorMessage"></div>
+                <p>Search Reviews Containing: </p>
+                <input type="text" id="reviewsContaining">
+
+                <p>Search Reviews That Opened Between: </p>
+                <label for="startDate">Start Date: </label>
+                <input type="date" id="startDate"><br>
+                <label for="endDate">End Date: </label>
+                <input type="date" id="endDate"><br>
+
+                <p>Serach Reviews By Specific Critic: </p>
+                <input type="text" id="criticName"><br><br>
+                <button onclick="getReviews()">Search Reviews</button>
+            </div>
+
+            
+          
+        </div>
+        <div class="main">
+            <div id="reviews">
+                <table class="sortable">
+                    <thead>
+                    <tr id="tableHeader">
+                    </tr>
+                    </thead>
+                    <tbody id="reviewsTable">
+                        <tr id='id'>
+        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script src="js/reviews.js"></script>
